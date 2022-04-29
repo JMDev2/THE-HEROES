@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Hero {
     private String heroName;
     private int heroAge;
@@ -5,6 +8,7 @@ public class Hero {
     private String heroWeakness;
     private int heroId;
     private int squadId;
+    private static List<Hero> instances = new ArrayList<Hero>();
 
     public Hero(String heroName, int heroAge, String heroStrength, String heroWeakness, int heroId, int squadId) {
         this.heroName = heroName;
@@ -13,6 +17,7 @@ public class Hero {
         this.heroWeakness = heroWeakness;
         this.heroId = heroId;
         this.squadId = squadId;
+        instances.add(this);
     }
 
     public String getHeroName() {
@@ -61,5 +66,14 @@ public class Hero {
 
     public void setSquadId(int squadId) {
         this.squadId = squadId;
+    }
+    public static List<Hero>all(){
+        return instances;
+    }
+    public static Hero find(int id){
+        return instances.get(id-1);
+    }
+    public static void clear(){
+        instances.clear();
     }
 }
