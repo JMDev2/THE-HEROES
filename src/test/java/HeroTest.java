@@ -13,5 +13,17 @@ public class HeroTest {
             assertEquals("Superman", hero.getHeroName());
 
         }
+    @Test
+    public void getName_instantiatesWithAge_String() {
+        Hero hero = new Hero("Superman",30, "eating", "sleeping", 2, 4);
+        assertEquals(30, hero.getHeroAge());
+
+    }
+    @Test
+    public void getName_instantiatesWithStrength_String() {
+        Hero hero = new Hero("Superman",30, "eating", "sleeping", 2, 4);
+        assertEquals("eating", hero.getHeroStrength());
+
+    }
 
 }
