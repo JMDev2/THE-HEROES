@@ -25,5 +25,24 @@ public class HeroTest {
         assertEquals("eating", hero.getHeroStrength());
 
     }
+    @Test
+    public void getName_instantiatesWithWeakness_String() {
+        Hero hero = new Hero("Superman",30, "eating", "sleeping", 2, 4);
+        assertEquals("sleeping", hero.getHeroWeakness());
+
+    }
+    @Test
+    public void getName_instantiatesWithId_String() {
+        Hero hero = new Hero("Superman",30, "eating", "sleeping", 2, 4);
+        assertEquals(2, hero.getHeroId());
+
+    }
+    @Test
+    public void getName_instantiatesWithSquadId_String() {
+        Hero hero = new Hero("Superman",30, "eating", "sleeping", 2, 4);
+        assertEquals(4, hero.getSquadId());
+
+    }
+
 
 }
