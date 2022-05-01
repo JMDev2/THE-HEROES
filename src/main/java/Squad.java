@@ -6,13 +6,14 @@ public class Squad {
     private  String squadName;
     private String squadCause;
     private int squadId;
-    private static List<Squad> instances = new ArrayList<Squad>();
+    private static ArrayList<Squad> instances = new ArrayList<Squad>();
 
-    public Squad(int squadSize, String squadName, String squadCause, int squadId) {
+    public Squad(int squadSize, String squadName, String squadCause) {
         this.squadSize = squadSize;
         this.squadName = squadName;
         this.squadCause = squadCause;
         this.squadId = squadId;
+        this.instances.add(this);
     }
 
     public int getSquadSize() {
@@ -46,12 +47,15 @@ public class Squad {
     public void setSquadId(int squadId) {
         this.squadId = squadId;
     }
-
-    public static List<Squad> getInstances() {
+    public static ArrayList<Squad> getAll() {
         return instances;
     }
 
-    public static void setInstances(List<Squad> instances) {
-        Squad.instances = instances;
-    }
+//    public static List<Squad> getInstances() {
+//        return instances;
+//    }
+
+//    public static void setInstances(List<Squad> instances) {
+//        Squad.instances = instances;
+//    }
 }

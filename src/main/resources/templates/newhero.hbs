@@ -4,21 +4,18 @@
 
         <div class="myForm >
             <div class="container-sm">
-                <form action="/heros" method="post" >
+
+                <form action="/heroesdetails/new" method="post" >
                     <label for="heroName">Hero Name:</label>
                     <input type="text" id="heroName" name="heroName" required>
                     <br>
 
                     <label for="heroAge">Hero Age :</label>
-                    <input type="number" name="heroAge" id="heroName" required>
+                    <input type="number" name="heroAge" id="heroAge" required>
                     <br>
 
                     <label for="heroStrength">Hero Strength:</label>
                     <input type="text" id="heroStrength" name="heroStrength" required>
-                    <br>
-
-                    <label for="heroAge">Hero Age :</label>
-                    <input type="number" name="heroAge" id="heroName" required>
                     <br>
 
                     <label  for="heroWeakness">Hero Weakness: </label>
@@ -26,8 +23,10 @@
                     <br>
                     <br>
 
-                    <p class="text-center"><a class="btn btn-outline-primary" href="/"> Create a new Hero.</a> </p>
-                    <p class="text-center"><a class="btn btn-outline-primary" href="/newsquad"> Create a new Squad.</a> </p>
+                 <button type="submit" class="btn">Go<</button>
+
+<!--                   <p type="submit" class="text-center"><a class="btn btn-outline-primary" href="/heroesdetails"> Create a new Hero.</a> </p>-->
+                    <p type="submit" class="text-center"><a class="btn btn-outline-primary" href="/newsquad"> Create a new Squad.</a> </p>
 
                 </form>
 

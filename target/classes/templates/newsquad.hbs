@@ -6,21 +6,21 @@
 
     <div class="myForm1">
         <div class="container-sm" style="max-width: 500px;">
-            <form action="/heros" method="post">
-                <label for="squadName">Squad Name:</label>
-                <input type="text" id="squadName" name="squadName" required>
+            <form action="/squaddetails/new" method="post">
+                <label for="squadSize">Squad Size:</label>
+                <input type="number" id="squadSize" name="squadSize" required>
                 <br>
 
-                <label for="squadAge">Squad Age :</label>
-                <input type="number" name="squadAge" id="squadName" required>
+                <label for="squadName">Squad Name :</label>
+                <input type="text" name="squadName" id="squadName" required>
                 <br>
 
-                <label for="cause">Cause:</label>
-                <input type="text" id="cause" name="cause" required>
+                <label for="squadCause">Cause:</label>
+                <input type="text" id="squadCause" name="squadCause" required>
                 <br>
                 <br>
 
-                <p class="text-center"><a class="btn btn-outline-primary" href="/squaddetails"> Create a new one.</a> </p>
+                <button type="submit" class="btn">New Squad</button>
 
             </form>
 

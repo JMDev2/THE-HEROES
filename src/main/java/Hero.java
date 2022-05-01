@@ -10,7 +10,7 @@ public class Hero {
     private int squadId;
     private static List<Hero> instances = new ArrayList<Hero>();
 
-    public Hero(String heroName, int heroAge, String heroStrength, String heroWeakness, int heroId, int squadId) {
+    public Hero(String heroName, int heroAge, String heroStrength, String heroWeakness) {
         this.heroName = heroName;
         this.heroAge = heroAge;
         this.heroStrength = heroStrength;
