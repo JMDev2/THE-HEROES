@@ -5,20 +5,22 @@
     <h1> The Heroes Details </h1>
     <div class="list-group">
 
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-            <div class="d-flex w-75 justify-content-between">
-                <h4> Hero Name:{{Hero.heroName}}</h4> <br>
-                <p>Hero Age: {{Hero.heroAge}} years old</p>
-            </div>
-            <p> Hero Powers: {{Hero.heroStrength}}
-                <br> Hero Weaknesses: {{Hero.heroWeakness}}</p>
-        </a>
+      <ul>
+          <li><h4> Hero Name:{{Hero.heroName}}</h4></li>
+          <li><h4> Hero Name:{{Hero.heroAge}}</h4> </li>
+          <li><h4>Hero Powers: {{Hero.heroStrength}}</h4></li>
+          <li><h4>Hero Weaknesses: {{Hero.heroWeakness}}</h4></li>
+      </ul>
 
-    </div>
+        <hr>
+
 
     <br>
-    <p><a href="/squads/$squad.getId()/heroes/new" class="btn btn-lg btn-success">Add new hero</a></p>
-    <p><a href="/squads" class="btn btn-lg btn-danger">All squads</a></p>
+        <p><a class="btn btn-lg btn-success" href="/newhero">+ Add New Hero</a></p>
+
+
+        <p><a class="btn btn-lg btn-danger" href="/squaddetails">All squads</a></p>
+</div>
 </div>
 
 
