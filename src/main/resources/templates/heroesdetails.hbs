@@ -1,26 +1,28 @@
 {{#partial "content"}}
 
 
-<div class="jumbotron">
-    <h1> The Heroes Details </h1>
-    <div class="list-group">
+<div class="heroesdetails text-center">
+    <div class="jumbotron">
+        <h1> The Heroes Details </h1>
+        <div class="list-group">
 
-      <ul>
-          <li><h4> Hero Name:{{Hero.heroName}}</h4></li>
-          <li><h4> Hero Name:{{Hero.heroAge}}</h4> </li>
-          <li><h4>Hero Powers: {{Hero.heroStrength}}</h4></li>
-          <li><h4>Hero Weaknesses: {{Hero.heroWeakness}}</h4></li>
-      </ul>
+            <ul type="none">
+                <li><h4> Hero Name:{{Hero.heroName}}</h4></li>
+                <li><h4> Hero Age:{{Hero.heroAge}} Years Old.</h4> </li>
+                <li><h4>Hero Powers: {{Hero.heroStrength}}</h4></li>
+                <li><h4>Hero Weaknesses: {{Hero.heroWeakness}}</h4></li>
+            </ul>
 
-        <hr>
-
-
-    <br>
-        <p><a class="btn btn-lg btn-success" href="/newhero">+ Add New Hero</a></p>
+            <hr>
 
 
-        <p><a class="btn btn-lg btn-danger" href="/squaddetails">All squads</a></p>
-</div>
+            <br>
+            <p><a class="btn btn-lg btn-success" href="/newhero">+ Add New Hero</a></p>
+            <p type="submit" class="text-center"><a class="btn btn-outline-primary" href="/squaddetails"> Add a new Squad.</a> </p>
+
+            <p><a class="btn btn-lg btn-danger" href="/squaddetails">All squads</a></p>
+        </div>
+    </div>
 </div>
 
 

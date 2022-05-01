@@ -1,20 +1,20 @@
 
 
 {{#partial "content"}}
-    <div class="jumbotron">
-        <h2 class="display-3">All Squads</h2>
+    <div class="jumbotron text-center">
+        <h2 class="display-3"><u>All Squads</u></h2>
         <br>
 
 
         <div class="list-group">
-            {{#each Squad}}
-                My Squad is: {{Squad.squadName}})
 
-                    <p>{{Squad.squadSize}}</p>
-                    <p>{{Squad.squadName}}</p>
+                My Squad is: {{Squad.squadName}}
+
+                    <p>{{Squad.squadSize}} mX number of Heroes</p>
+                <p><small>{{Squad.squadName}} Squad</small></p>
                     <p>{{Squad.SquadCause}}</p>
 
-            {{/each}}
+
 
         </div>
 

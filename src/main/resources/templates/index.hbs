@@ -3,40 +3,15 @@
 {{/partial}}
 
 {{#partial "content"}}
-    <div class="jumbotron text-center">
-        <h1>Welcome to The Heroes</h1>
-        <p>This is a blog </p>
-        <a href="/new">
-            <p><a class="btn btn-outline-primary" href="/newhero">+ Add New Hero</a></p>
-        </a>
-    </div>
-    <div class="container">
-        <div class="row">
-
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-header">
-                            <p>SQUAD NAME</p>
-                        </div>
-                        <div class="card-body">
-
-                            <img src="https://media.istockphoto.com/photos/3d-soccer-player-blue-jersey-landing-on-floor-picture-id1267146146?k=20&m=1267146146&s=612x612&w=0&h=zbUiaFDEhiosQtflgq3k_gw-M1_o2UYdhjGEEUGCDs4=" height="150px" width="100px">
-                        </div>
-                        <div class="card-footer">
-                            <div class="d-flex">
-
-                                <form action="/posts/{{id}}" method="DELETE">
-                                    <button class="btn btn-danger ml-auto ">Delete</button>
-                                </form>
-
-                                <p><a class="btn btn-outline-primary" href="/heroesdetails">View Hero Details</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-        </div>
-    </div>
+  <div class="indexx">
+      <div class="jumbotron text-center">
+          <h1>Welcome to The Heroes</h1>
+          <p>The Site Where heroes Meet Other Heroes </p>
+          <a href="/new">
+              <p><a class="btn btn-outline-primary" href="/newhero">+ Add New Hero</a></p>
+          </a>
+      </div>
+  </div>
 {{/partial}}
 
 {{> layout.hbs}}
