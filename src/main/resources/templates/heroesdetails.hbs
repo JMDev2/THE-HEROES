@@ -6,18 +6,23 @@
         <h1> The Heroes Details </h1>
         <div class="list-group">
 
+                {{#each Heroes}}
+
+
             <ul type="none">
-                <li><h4> Hero Name:{{Hero.heroName}}</h4></li>
-                <li><h4> Hero Age:{{Hero.heroAge}} Years Old.</h4> </li>
-                <li><h4>Hero Powers: {{Hero.heroStrength}}</h4></li>
-                <li><h4>Hero Weaknesses: {{Hero.heroWeakness}}</h4></li>
+                <li><h4> Hero Name:{{heroName}}</h4></li>
+                <li><h4> Hero Age:{{heroAge}} Years Old.</h4> </li>
+                <li><h4>Hero Powers: {{heroStrength}}</h4></li>
+                <li><h4>Hero Weaknesses: {{heroWeakness}}</h4></li>
             </ul>
+                {{/each}}
+
 
             <hr>
 
 
             <br>
-            <p><a class="btn btn-lg btn-success" href="/newhero">+ Add New Hero</a></p>
+            <p><a class="btn btn-lg btn-success" href="/newhero/new">+ Add New Hero</a></p>
             <p type="submit"> <a class="btn btn-outline-primary" href="/newsquad"> Create a new Squad.</a> </p>
 
             <p><a class="btn btn-lg btn-danger" href="/squaddetails">All squads</a></p>
