@@ -7,12 +7,13 @@
 
 
         <div class="list-group">
-
-                My Squad is: {{Squad.squadName}}
-
-                    <p>{{Squad.squadSize}} mX number of Heroes</p>
-                <p><small>{{Squad.squadName}} Squad</small></p>
-                    <p>{{Squad.SquadCause}}</p>
+            {{#each Squad}}
+           <div>
+               <p>{{Squad.squadSize}}</p>
+               <p>{{Squad.squadName}}</p>
+               <p>{{Squad.squadCause}}</p>
+           </div>
+              {{/each}}
 
 
 

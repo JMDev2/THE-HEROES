@@ -55,25 +55,51 @@ public class App {
             return new ModelAndView(model, "newsquad.hbs");
         }, new HandlebarsTemplateEngine());
 
-//
-//        post a squad
         post("/squaddetails/new", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            ArrayList mySquadArraylist = Squad.getAll();
             Integer squadSize = Integer.parseInt(request.queryParams("squadSize"));
             String squadName = request.queryParams("squadName");
             String squadCause = request.queryParams("squadCause");
-            Squad squad = new Squad(squadSize, squadName, squadCause);
+            Squad squad = new Squad(squadName, squadCause);
             request.session().attribute("Squad", squad);
             model.put("Squad", request.session().attribute("Squad"));
+//            request.session().attribute("SquadSession", squad);
+//            model.put("squadMap", request.session().attribute("SquadSession"));
             return new ModelAndView(model, "squaddetails.hbs");
         }, new HandlebarsTemplateEngine());
+
+//
+//        post a squad
+//        post("/squaddetails/new", (request, response) -> {
+//            Map<String, Object> model = new HashMap<>();
+//            Integer squadSize = Integer.parseInt(request.queryParams("squadSize"));
+//            String squadName = request.queryParams("squadName");
+//            String squadCause = request.queryParams("squadCause");
+//
+//            ArrayList<Hero> heroes = new ArrayList<>();
+//            if(request.queryParamsValues("heroes")!=null){
+//                String[] heroesList = request.queryParamsValues("heroes");
+//                for(int i=0; i<heroesList.length; i++){
+//                    her
+//                }
+//            }
+//            return new ModelAndView(model, "squaddetails.hbs");
+//        }, new HandlebarsTemplateEngine());
 
 
         get("/", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
+
+//        arrylist post all squad
+//        get("/squaddetails", (req, res) -> {
+//            Map<String, Object> model = new HashMap<>();
+//            ArrayList<Squad> squadList = Squad.getAll();
+//            model.put("allSquad", squadList);
+//
+//            return new ModelAndView(model, "squaddetails.hbs");
+//        }, new HandlebarsTemplateEngine());
 
 
 

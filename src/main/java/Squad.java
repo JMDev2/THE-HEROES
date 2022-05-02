@@ -8,8 +8,8 @@ public class Squad {
     private int squadId;
     private static ArrayList<Squad> instances = new ArrayList<Squad>();
 
-    public Squad(int squadSize, String squadName, String squadCause) {
-        this.squadSize = squadSize;
+    public Squad( String squadName, String squadCause) {
+        this.squadSize = 4;
         this.squadName = squadName;
         this.squadCause = squadCause;
         this.squadId = squadId;
@@ -47,6 +47,7 @@ public class Squad {
     public void setSquadId(int squadId) {
         this.squadId = squadId;
     }
+
     public static ArrayList<Squad> getAll() {
         return instances;
     }

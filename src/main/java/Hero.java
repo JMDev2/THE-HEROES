@@ -8,16 +8,17 @@ public class Hero {
     private String heroWeakness;
     private int heroId;
     private int squadId;
-    private static List<Hero> instances = new ArrayList<Hero>();
+    private boolean occupied;
+    private static List<Hero> heroes = new ArrayList<Hero>();
 
     public Hero(String heroName, int heroAge, String heroStrength, String heroWeakness) {
         this.heroName = heroName;
         this.heroAge = heroAge;
         this.heroStrength = heroStrength;
         this.heroWeakness = heroWeakness;
-        this.heroId = heroId;
-        this.squadId = squadId;
-        instances.add(this);
+//        this.squadId = squadId;
+        heroes.add(this);
+        this.heroId = heroes.size();
     }
 
     public String getHeroName() {
@@ -68,12 +69,19 @@ public class Hero {
         this.squadId = squadId;
     }
     public static List<Hero>all(){
-        return instances;
+        return heroes;
     }
     public static Hero find(int id){
-        return instances.get(id-1);
+        return heroes.get(id-1);
     }
     public static void clear(){
-        instances.clear();
+        heroes.clear();
     }
+    public  boolean isOccupied(){
+        return occupied;
+    }
+    public void updateHero(boolean occupied){
+        this.occupied = occupied;
+    }
+
 }
