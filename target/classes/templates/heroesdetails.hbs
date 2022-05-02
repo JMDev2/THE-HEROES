@@ -8,13 +8,19 @@
 
                 {{#each Heroes}}
 
+                    <div class="card">
+                        <div class="card-body">
+                            <ul type="none">
+                                <li><h4> Hero Name:{{heroName}}</h4></li>
+                                <li><h4> Hero Age:{{heroAge}} Years Old.</h4> </li>
+                                <li><h4>Hero Powers: {{heroStrength}}</h4></li>
+                                <li><h4>Hero Weaknesses: {{heroWeakness}}</h4></li>
+                            </ul>
+                        </div>
+                    </div>
 
-            <ul type="none">
-                <li><h4> Hero Name:{{heroName}}</h4></li>
-                <li><h4> Hero Age:{{heroAge}} Years Old.</h4> </li>
-                <li><h4>Hero Powers: {{heroStrength}}</h4></li>
-                <li><h4>Hero Weaknesses: {{heroWeakness}}</h4></li>
-            </ul>
+
+
                 {{/each}}
 
 

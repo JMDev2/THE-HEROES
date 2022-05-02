@@ -63,3 +63,6 @@ body{
 .heroesdetails{
     padding:100px;
 }
+.card{
+    background-color: orange;
+}

@@ -86,20 +86,6 @@ public class App {
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
 
-//        arrylist post all squad
-//        get("/squaddetails", (req, res) -> {
-//            Map<String, Object> model = new HashMap<>();
-//            ArrayList<Squad> squadList = Squad.getAll();
-//            model.put("allSquad", squadList);
-//
-//            return new ModelAndView(model, "squaddetails.hbs");
-//        }, new HandlebarsTemplateEngine());
-
-
-
-
-
-
 
     }
 
