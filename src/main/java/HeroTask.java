@@ -12,7 +12,6 @@ public class HeroTask {
         }
         myHero.setHeroId(instance.size()+1);
         instance.add(myHero);
-
     }
     public List<Hero> getList(){
         return instance;

@@ -65,7 +65,6 @@ public class App {
             String squadName = request.queryParams("squadName");
             String squadCause = request.queryParams("squadCause");
             Squad squad = new Squad(squadName, squadCause);
-
             SquadTask squadTask = new SquadTask();
             squadTask.createSquad(request.session().attribute("mySquadList"), squad);
             List<Squad>squadList = squadTask.getSquad();
@@ -74,17 +73,12 @@ public class App {
             return null;
         }, new HandlebarsTemplateEngine());
 
+
         get("/squaddetails", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             model.put("Squads", request.session().attribute("mySquadList"));
-//            model.put("heroSession", request.session().attribute("myHeroList"));//calling the session
-
             return new ModelAndView(model, "squaddetails.hbs");
         }, new HandlebarsTemplateEngine());
-
-
-
-
 
 
         get("/", (req, res) -> {
