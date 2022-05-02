@@ -47,7 +47,7 @@ body{
 }
 .myForm1{
     border: 1px solid black;
-    height: 350px;
+    height: 400px;
     width:500px;
     margin-left: 300px;
     padding: 50px;
@@ -64,5 +64,5 @@ body{
     padding:100px;
 }
 .card{
-    background-color: orange;
+    background-color: blue;
 }
