@@ -65,10 +65,24 @@ public class App {
             String squadName = request.queryParams("squadName");
             String squadCause = request.queryParams("squadCause");
             Squad squad = new Squad(squadName, squadCause);
-            request.session().attribute("Squad", squad);
-            model.put("Squad", request.session().attribute("Squad"));
+
+            SquadTask squadTask = new SquadTask();
+            squadTask.createSquad(request.session().attribute("mySquadList"), squad);
+            List<Squad>squadList = squadTask.getSquad();
+            request.session().attribute("mySquadList", squadList);
+            response.redirect("/squaddetails");
+            return null;
+        }, new HandlebarsTemplateEngine());
+
+        get("/squaddetails", (request, response) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            model.put("Squads", request.session().attribute("mySquadList"));
+//            model.put("heroSession", request.session().attribute("myHeroList"));//calling the session
+
             return new ModelAndView(model, "squaddetails.hbs");
         }, new HandlebarsTemplateEngine());
+
+
 
 
 

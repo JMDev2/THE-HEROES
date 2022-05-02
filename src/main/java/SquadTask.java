@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class squadTask {
+public class SquadTask {
     private List<Squad> instance = new ArrayList<>();
 
     public void createSquad(List<Squad> mySquadList, Squad mySquad){
@@ -13,7 +13,13 @@ public class squadTask {
         mySquad.setSquadId(instance.size()+1);
         instance.add(mySquad);
     }
-
+    public List<Squad> getSquad(){
+        return instance;
+    }
 }
+
+
+
+
 
 
