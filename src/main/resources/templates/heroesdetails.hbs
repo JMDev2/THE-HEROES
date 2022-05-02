@@ -1,14 +1,9 @@
 {{#partial "content"}}
-
-
 <div class="heroesdetails text-center">
     <div class="jumbotron">
         <h1> The Heroes Details </h1>
         <div class="list-group">
-
                 {{#each Heroes}}
-
-
             <ul type="none">
                 <li><h4> Hero Name:{{heroName}}</h4></li>
                 <li><h4> Hero Age:{{heroAge}} Years Old.</h4> </li>
@@ -16,11 +11,7 @@
                 <li><h4>Hero Weaknesses: {{heroWeakness}}</h4></li>
             </ul>
                 {{/each}}
-
-
             <hr>
-
-
             <br>
             <p><a class="btn btn-lg btn-success" href="/newhero/new">+ Add New Hero</a></p>
             <p type="submit"> <a class="btn btn-outline-primary" href="/newsquad"> Create a new Squad.</a> </p>
@@ -29,7 +20,6 @@
         </div>
     </div>
 </div>
-
 
 {{/partial}}
 {{> layout.hbs}}
