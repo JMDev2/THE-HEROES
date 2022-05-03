@@ -52,11 +52,5 @@ public class Squad {
         return instances;
     }
 
-//    public static List<Squad> getInstances() {
-//        return instances;
-//    }
 
-//    public static void setInstances(List<Squad> instances) {
-//        Squad.instances = instances;
-//    }
 }

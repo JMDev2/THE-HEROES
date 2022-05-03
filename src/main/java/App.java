@@ -7,17 +7,23 @@ import java.util.Map;
 
 import static spark.Spark.*;
 public class App {
+    static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
+    }
     public static void main(String[] args) {
+
+        port(getHerokuAssignedPort());
         staticFileLocation("/public");
 
 
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             String heroName = request.queryParams("heroName");
-
             return new ModelAndView(model, "index.hbs");
-
-
         }, new HandlebarsTemplateEngine());
 
         get("/newhero/new", (request, response) -> {
@@ -26,15 +32,12 @@ public class App {
             return new ModelAndView(model, "newhero.hbs");
         }, new HandlebarsTemplateEngine());
 
-
-
-        post("/heroesdetails", (request, response) -> {
+        post("/heroesdetails/new", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             String heroName = request.queryParams("heroName");
             Integer heroAge = Integer.parseInt(request.queryParams("heroAge"));
             String heroStrength = request.queryParams("heroStrength");
             String heroWeakness = request.queryParams("heroWeakness");
-
             Hero hero = new Hero(heroName, heroAge, heroStrength, heroWeakness);
             HeroTask heroTask = new HeroTask();
             heroTask.creatHero(request.session().attribute("myHeroList"), hero);
@@ -48,8 +51,6 @@ public class App {
         get("/heroesdetails", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             model.put("Heroes", request.session().attribute("myHeroList"));
-//            model.put("heroSession", request.session().attribute("myHeroList"));//calling the session
-
             return new ModelAndView(model, "heroesdetails.hbs");
         }, new HandlebarsTemplateEngine());
 

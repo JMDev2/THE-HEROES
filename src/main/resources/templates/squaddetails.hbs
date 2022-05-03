@@ -4,19 +4,21 @@
         <h2 class="display-3"><u>All Squads</u></h2>
         <br>
 
-        <div class="card">
-            <div class="card-body">
             <div class="list-group">
                 {{#each Squads}}
-                    <div>
-                        <p>{{squadSize}}</p>
-                        <p>{{squadName}}</p>
-                        <p>{{squadCause}}</p>
+                    <div class="card">
+                        <div class="card-body">
+                            <ul type="none">
+                                <li><h4> Squad Size:{{squadSize}}</h4></li>
+                                <li><h4> Squad Name:{{squadName}} Years Old.</h4> </li>
+                                <li><h4>Squad Cause: {{squadCause}}</h4></li>
+
+                            </ul>
+                        </div>
                     </div>
-            </div>
-        </div>
+                    <hr style="height:2px; width:100%; border-width:0; color:black; background-color:black">
               {{/each}}
-     </div>
+            </div>
 
         <p type="submit" class="text-center"><a class="btn btn-outline-primary" href="/newsquad"> Add a new Squad.</a> </p>
     </div>

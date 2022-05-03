@@ -16,9 +16,7 @@ public class Hero {
         this.heroAge = heroAge;
         this.heroStrength = heroStrength;
         this.heroWeakness = heroWeakness;
-//        this.squadId = squadId;
-//        heroes.add(this);
-//        this.heroId = heroes.size();
+
     }
 
     public String getHeroName() {
@@ -68,9 +66,6 @@ public class Hero {
     public void setSquadId(int squadId) {
         this.squadId = squadId;
     }
-//    public static List<Hero>getAll(){
-//        return heroes;
-//    }
 
 
     public  boolean isOccupied(){

@@ -34,15 +34,10 @@ public class HeroTest {
     @Test
     public void getName_instantiatesWithId_String() {
         Hero hero = new Hero("Superman",30, "eating", "sleeping");
-        assertEquals(2, hero.getHeroId());
+        assertEquals(0, hero.getHeroId());
 
     }
-    @Test
-    public void getName_instantiatesWithSquadId_String() {
-        Hero hero = new Hero("Superman",30, "eating", "sleeping");
-        assertEquals(4, hero.getSquadId());
 
-    }
 
 
 }

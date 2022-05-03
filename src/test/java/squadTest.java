@@ -11,7 +11,7 @@ public class squadTest {
     @Test
     public void squad_instantiatesSquadsize_true() {
         Squad testSquad = new Squad("gitter", "water");
-        assertEquals(3, testSquad.getSquadSize());
+        assertEquals(4, testSquad.getSquadSize());
     }
     @Test
     public void squad_instantiatesName_String() {
