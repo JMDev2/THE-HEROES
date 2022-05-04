@@ -1,0 +1,1 @@
+web: java -jar target/maina-heroes-1.0-jar-with-dependencies.jar

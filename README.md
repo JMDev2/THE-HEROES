@@ -4,14 +4,14 @@
 
 ## Description
 
-The Heroes is aApp, allows you to recruit a team of superheroes by collecting the personal details ie Name, age, their strenght and weeknesses. It also allows you to creat a Squad for the heroes.
-
+The Heroes App, is an application that allows you to recruit a team of superheroes by collecting personal details i.e Name, age, their strength and weaknesses. It also allows you to create a Squad for the heroes.
 
 ## Setup/Installation Requirements
 
 - Make sure you have stable internet connection- Wifi or Cellular. Connect using your Mobile phone or Computer.
 - To access the application, form the repository by clicking the form button. Go ahead to clone it to have it on your local repository.
 - use git clone command followed by the link: 
+< git clone https://github.com/JOSEPHMAINA1995/THE-HEROES.git
 - After succesfully cloning, open the application using Intellij already installed in your computer.
 
 ## Contribution
@@ -58,7 +58,11 @@ The appliaction contains verious tests that checks whether the functionalities d
 - HTML
 - CSS
 
+## Technologies Used
+ https://maina-heroes.herokuapp.com/
+
 ### License
+
 
 MIT License
 Permission is hereby granted, free of charge, to any person obtaining a copy

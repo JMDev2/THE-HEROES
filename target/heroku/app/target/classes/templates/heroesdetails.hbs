@@ -1,0 +1,33 @@
+{{#partial "content"}}
+<div class="heroesdetails text-center">
+    <div class="jumbotron">
+        <h1> The Heroes Details </h1>
+        <div class="list-group">
+                {{#each Heroes}}
+
+                    <div class="card">
+                        <div class="card-body">
+                            <ul type="none">
+                                <li><h4> Hero Name:{{heroName}}</h4></li>
+                                <li><h4> Hero Age:{{heroAge}} Years Old.</h4> </li>
+                                <li><h4>Hero Powers: {{heroStrength}}</h4></li>
+                                <li><h4>Hero Weaknesses: {{heroWeakness}}</h4></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <hr style="height:2px; width:100%; border-width:0; color: black; background-color:black">
+
+                {{/each}}
+
+            <br>
+            <p><a class="btn btn-lg btn-success" href="/newhero/new">+ Add New Hero</a></p>
+            <p type="submit"> <a class="btn btn-outline-primary" href="/newsquad"> Create a new Squad.</a> </p>
+
+            <p><a class="btn btn-lg btn-danger" href="/squaddetails">All squads</a></p>
+        </div>
+    </div>
+</div>
+
+{{/partial}}
+{{> layout.hbs}}

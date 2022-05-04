@@ -1,0 +1,41 @@
+{{#partial "content"}}
+
+    <h2 class="text-center">Create A New Hero</h2>
+
+        <div class="myForm >
+            <div class="container-sm">
+
+                <form action="/heroesdetails/new" method="post" >
+                    <label for="heroName">Hero Name:</label>
+                    <input type="text" id="heroName" name="heroName" required>
+                    <br>
+
+                    <label for="heroAge">Hero Age :</label>
+                    <input type="number" name="heroAge" id="heroAge" required>
+                    <br>
+
+                    <label for="heroStrength">Hero Strength:</label>
+                    <input type="text" id="heroStrength" name="heroStrength" required>
+                    <br>
+
+                    <label  for="heroWeakness">Hero Weakness: </label>
+                    <input type="text" id="heroWeakness" name="heroWeakness" required>
+                    <br>
+                    <br>
+
+                 <button type="submit" class="btn btn-outline-primary" >Add The Hero</button>
+                    <br>
+                    <br>
+                    <p type="submit"> <a class="btn btn-outline-primary" href="/newsquad"> Create a new Squad.</a> </p>
+
+                </form>
+
+            </div>
+        </div>
+
+
+
+
+{{/partial}}
+
+{{> "layout.hbs"}}
